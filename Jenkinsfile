@@ -10,3 +10,16 @@ pipeline {
         }
     }
 }
+pipeline {
+    agent any
+    stages {
+        stage('Version 2') {
+            steps {
+                // Task 2: List files
+                bat 'dir'
+                // Task 3: System Time
+                bat 'time /t'
+            }
+        }
+    }
+}
