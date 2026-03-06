@@ -19,5 +19,12 @@ pipeline {
                 bat 'time /t'
             }
         }
+        stage('Version 3') {
+            steps {
+                // Task 2 & 3: Create file and write message
+                bat 'echo Simple build message > buildlog.txt'
+                bat 'type buildlog.txt'
+            }
+        }
     }
 }
