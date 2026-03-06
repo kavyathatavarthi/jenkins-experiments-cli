@@ -26,5 +26,14 @@ pipeline {
                 bat 'type buildlog.txt'
             }
         }
+        stage('Version 4') {
+            steps {
+                // Task 2: Append Build Number (Using >>)
+                bat "echo Jenkins Build Number: ${env.BUILD_NUMBER} >> buildlog.txt"
+                // Task 3: Display updated contents
+                echo "--- Updated Log Contents ---"
+                bat 'type buildlog.txt'
+            }
+        }
     }
 }
